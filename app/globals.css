@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DEFAULT TO DARK MODE (Since user asked for Dark SaaS) */
+    --background: 240 10% 3.9%;
+    /* Rich Black */
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 4.9%;
+    /* Slightly lighter black */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 24 95% 53%;
+    /* VIBRANT ORANGE */
+    --primary-foreground: 0 0% 98%;
+    /* White text on orange */
+
+    --secondary: 240 3.7% 15.9%;
+    /* Dark grey */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 24 95% 53%;
+    /* Orange ring focus */
+    --radius: 0.5rem;
+    --chart-1: 24 95% 53%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* Force Dark Mode styles even if system is light (for this specific request) */
+  :root {
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    /* optional dot pattern */
+    background-image: radial-gradient(#262626 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center top;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+  }
+
+  @layer utilities {
+    .font-serif {
+      font-family: var(--font-lora), serif;
+    }
+
+    .font-sans {
+      font-family: var(--font-inter), sans-serif;
+    }
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
+}
