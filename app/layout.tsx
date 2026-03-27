@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter, Lora } from 'next/font/google';
 import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const lora = Lora({ subsets: ['latin'], variable: '--font-lora', weight: '400', style: ['italic'] });
@@ -37,7 +38,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="scroll-smooth">
-            <body className={`${inter.variable} ${lora.variable} font-sans`}>{children}</body>
+            <body className={`${inter.variable} ${lora.variable} font-sans`}>
+                {children}
+                <Analytics />
+            </body>
         </html>
     );
 }
