@@ -12,8 +12,25 @@ import { CTA } from "@/components/cta";
 import { Navbar } from "@/components/navbar";
 
 export default function Home() {
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Kyle Andrei Briones',
+        jobTitle: 'Vibe Coder',
+        url: 'https://www.kyleandreibriones.info',
+        sameAs: [
+            // Add your social links here if any
+        ],
+        description: 'Vibe Coder specializing in rapid landing page and web application development using AI.',
+    };
+
     return (
         <main className="min-h-screen bg-background">
+            {/* Add JSON-LD to the head via Next.js recommendations for App Router */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <Navbar />
             <Hero />
             <Problem />
