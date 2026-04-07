@@ -16,7 +16,7 @@ const projects = [
         tags: [],
         gradient: "from-orange-500/20 to-amber-500/20",
         icon: <Users className="w-6 h-6 text-orange-400" />,
-        videoSrc: "/videos/Portfolio Vid 1.mov",
+        videoSrc: "/videos/Portfolio Vid 1.mp4",
         link: "#",
     },
     {
@@ -27,7 +27,7 @@ const projects = [
         tags: [],
         gradient: "from-blue-500/20 to-cyan-500/20",
         icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
-        videoSrc: "/videos/Portfolio Vid 2.mov",
+        videoSrc: "/videos/Portfolio Vid 2.mp4",
         link: "#",
     },
     {
@@ -38,7 +38,7 @@ const projects = [
         tags: [],
         gradient: "from-emerald-500/20 to-teal-500/20",
         icon: <Layout className="w-6 h-6 text-emerald-400" />,
-        videoSrc: "/videos/Portfolio Vid 3.mov",
+        videoSrc: "/videos/Portfolio Vid 3.mp4",
         link: "#",
     },
     {
@@ -49,7 +49,7 @@ const projects = [
         tags: [],
         gradient: "from-purple-500/20 to-pink-500/20",
         icon: <CheckCircle2 className="w-6 h-6 text-purple-400" />,
-        videoSrc: "/videos/Portfolio Vid 4.mov",
+        videoSrc: "/videos/Portfolio Vid 4.mp4",
         link: "#",
     }
 ];
@@ -127,6 +127,7 @@ export function Work() {
                                                 muted
                                                 loop
                                                 playsInline
+                                                preload="metadata"
                                                 className="w-full h-full object-cover"
                                             />
                                         ) : (
